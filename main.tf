@@ -26,8 +26,8 @@ resource "azurerm_virtual_machine_extension" "linux" {
   location                   = data.azurerm_resource_group.main.location
   resource_group_name        = data.azurerm_resource_group.main.name
   virtual_machine_name       = data.azurerm_virtual_machine.main.name
-  publisher                  = Microsoft.CPlat.Core"
-  type                       = RunCommandLinux"
+  publisher                  = "Microsoft.CPlat.Core"
+  type                       = "RunCommandLinux"
   type_handler_version       = "1.0"
   auto_upgrade_minor_version = true
   protected_settings         = jsonencode(local.settings_linux)
