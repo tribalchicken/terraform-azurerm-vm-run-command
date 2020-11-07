@@ -21,7 +21,7 @@ variable "script" {
 }
 
 variable "file_uris" {
-  type        = "list"
+  type        = list(string)
   default     = []
   description = "List of files to be downloaded."
 }
