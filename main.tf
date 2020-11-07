@@ -45,5 +45,5 @@ resource "azurerm_virtual_machine_extension" "windows" {
   type_handler_version       = "1.1"
   auto_upgrade_minor_version = true
   settings                   = jsonencode(local.settings_windows)
-  tags                       = {var.tags
+  tags                       = var.tags
 }
