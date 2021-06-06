@@ -1,6 +1,6 @@
 locals {
   settings_windows = {
-    script   = compact(concat(list(var.command), split("\n", var.script)))
+    script   = compact(concat(tolist(var.command), split("\n", var.script)))
     fileUris = var.file_uris
   }
 
